@@ -66,6 +66,42 @@ df_dxx <- D(expr = fxyz, 'x')
 df_dyy <- D(expr = fxyz, 'y')
 df_dzz <- D(expr = fxyz, 'z')
 
+```
 
+## Section 4: Plots 
+
+```{r}
+fx_4 <- function(x){
+  2.4*(exp(-0.05*x))*sin(x)
+}
+  
+
+ggplot(data = NULL) +
+  stat_function(fun = fx_4) +
+  xlim(min = -0.5, max = 0.5)
+
+```
+
+### Penguin Plots 
+
+#### Bill Measurements by Species 
+```{r}
+ggplot(data = penguins, aes(x = bill_length_mm, y = bill_depth_mm)) +
+  geom_point(aes(color = species)) +
+  scale_color_manual(values = c("magenta", "blue", "green")) +
+  labs(x = "Bill length (mm)", 
+       y = "Bill depth (mm)", 
+       title = "Palmer Penguin Bill Measurements",
+       color = "Species")
+```
+
+#### Flipper Length by Species 
+```{r}
+ggplot(data = penguins, aes(x = species, y = flipper_length_mm)) + 
+  geom_jitter(aes(color = species)) + 
+  labs(x = "Species",
+       y = "Flipper length (mm)",
+       title = "Palmer Penguin Flipper Lengths",
+       color = "Species")
 ```
 
