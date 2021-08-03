@@ -208,6 +208,14 @@ dg_dz &lt;- D(expr = gz, &#39;z&#39;)
 
 dg_dz_2 &lt;- D(expr = dg_dz, &#39;z&#39;)</code></pre>
 </div>
+<div id="partial-derivatives" class="section level3">
+<h3>Partial derivatives</h3>
+<pre class="r"><code>fxyz &lt;- expression(2*x^2*y - 3*x + 1 + 4*z^4*x)
+
+df_dxx &lt;- D(expr = fxyz, &#39;x&#39;)
+df_dyy &lt;- D(expr = fxyz, &#39;y&#39;)
+df_dzz &lt;- D(expr = fxyz, &#39;z&#39;)</code></pre>
+</div>
 
 
 

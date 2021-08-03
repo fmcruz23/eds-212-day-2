@@ -56,3 +56,16 @@ dg_dz <- D(expr = gz, 'z')
 dg_dz_2 <- D(expr = dg_dz, 'z')
 ```
 
+### Partial derivatives 
+
+```{r}
+
+fxyz <- expression(2*x^2*y - 3*x + 1 + 4*z^4*x)
+
+df_dxx <- D(expr = fxyz, 'x')
+df_dyy <- D(expr = fxyz, 'y')
+df_dzz <- D(expr = fxyz, 'z')
+
+
+```
+
