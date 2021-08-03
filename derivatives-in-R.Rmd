@@ -46,3 +46,13 @@ dg_dt_0 <- eval(expr = dg_dt)
 dg_dt_0
 ```
 
+
+### Higher order univariate derivatives
+
+```{r}
+gz <- expression(4.6 - 1.9*z^3)
+dg_dz <- D(expr = gz, 'z')
+
+dg_dz_2 <- D(expr = dg_dz, 'z')
+```
+
